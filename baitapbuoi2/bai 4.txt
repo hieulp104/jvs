@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class giaibaitap_jaavabai4 {
+    public static void main(String[] args) {
+        /*Bài 4: Viết chương trình nhập vào 3 số thực a, b, c. Giải phương trình bậc 4
+        trùng phương có dạng như sau:
+        ax^4 + bx^2 + c =0
+     */
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" nhap he so a=");
+        double a = sc.nextDouble();
+        System.out.println(" nhap he so b=");
+        double b = sc.nextDouble();
+        System.out.println(" nhap he so c=");
+        double c = sc.nextDouble();
+        // tinh denta khi x^2 =1
+        double dt = Math.pow(b,2) - 4 *a *c;
+        double x1,x3;
+        double x2,x4;
+        if (dt < 0)
+            System.out.println("phuong trinh vo nghiem");
+        else if (dt == 0) {
+            x1 = Math.sqrt((-b)/2*a);
+            x2 = -Math.sqrt((-b)/2*a);
+            System.out.println("phuong trinh co  nghiem x1"+x1);
+            System.out.println("phuong trinh co  nghiem x2"+x2);
+        }
+        else {
+
+            x1 = Math.sqrt(( b + Math.sqrt(dt)) / (2 * a));
+            x2 = -Math.sqrt(( b + Math.sqrt(dt)) / (2 * a));
+            x3 = Math.sqrt(( -b + Math.sqrt(dt)) / (2 * a));
+            x4 = -Math.sqrt(( -b + Math.sqrt(dt)) / (2 * a));
+            System.out.println(" phuong trinh co nghiem x1 ="+x1);
+            System.out.println(" phuong trinh co nghiem x2 ="+x2);
+            System.out.println(" phuong trinh co nghiem x3 ="+x3);
+            System.out.println(" phuong trinh co nghiem x4 ="+x4);
+        }
+        }
+    }
+

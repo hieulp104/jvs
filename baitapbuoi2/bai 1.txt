@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class baitapjavahit_bai1 {
+    public static void main(String[] args) {
+        /*1:Viết chương trình nhập vào số nguyên dương n, yêu cầu in ra hình vuông
+        có cạnh độ dài n.*/
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhap vao so nguyen duong n =");
+        int n = sc.nextInt();
+        if (n <= 0)
+            System.out.println("vui long nhap so nguyen duong");
+        else {
+
+            // In hình vuông có cạnh độ dài n
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println(); // Xuống dòng sau khi in một hàng
+            }
+        }
+        }
+    }

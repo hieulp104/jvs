@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class battapjavahit_bai2 {
+    public static void main(String[] args) {
+      /*  Bài 2: Tính và in ra giá trị của các biểu thức sau:
+        a, S=1 + 1/2 +1/3 +...+ 1/n
+        với số n nguyên dương được nhập từ bàn phím.
+        b. P = 1! + 2! + 3! + ⋯ + n! với số n nguyên dương được nhập từ bàn phím.*/
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" nhap vao tu ban phim");
+        float n = sc.nextFloat();
+        float sumA = 0;
+        float sumB = 0;
+
+        for (int i = 1; i <= n; i++) {
+            // Tính giá trị của biểu thức a
+            sumA += 1.0 / i;
+            // Tính giai thừa của i để tính biểu thức b
+            int gt = 1;
+            for (int j = 1; j <= i; j++) {
+                gt *= j;
+            }
+
+            sumB += gt;
+        }
+        System.out.println("a) Giá trị của biểu thức S = 1 + 1/2 + 1/3 + ... + 1/n là: " + sumA);
+        System.out.println("b) Giá trị của biểu thức P = 1! + 2! + 3! + ... + n! là: " + sumB);
+    }
+}
